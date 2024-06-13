@@ -48,10 +48,13 @@ function Modal({ user, onClose }) {
           <input name='senha' type='password' placeholder='Digite sua senha' ref={inputPassword} required/>
         </div>
 
-        <button onClick={(event) => { 
-          event.preventDefault();
-          editUsers( user.id )
-        }} >Editar</button>
+        <div className="btn-container">
+          <button className="btn-voltar">Voltar</button>
+          <button onClick={(event) => {
+            event.preventDefault();
+            editUsers( user.id )
+          }} >Editar</button>
+        </div>
       </form>
 
     </div>
